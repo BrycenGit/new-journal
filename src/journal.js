@@ -1,9 +1,16 @@
-function Triangle(side1, side2, side3) {
-  this.side1 = side1;
-  this.side2 = side2;
-  this.side3 = side3;
+export default function Journal(entryTitle, entryBody) {
+  this.title = entryTitle;
+  this.body = entryBody;
 }
 
-Triangle.prototype.checkType = function() {
-  return "I can't answer that yet!";
-}
+
+
+Journal.prototype.createTeaser = function() {
+  let teaser =  this.body.split(" ").slice(0,8);
+  return teaser;
+};
+
+// Journal.prototype.createTeaser = function(fullSentence) {
+
+  
+// }
